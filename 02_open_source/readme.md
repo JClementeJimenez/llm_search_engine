@@ -28,4 +28,14 @@
     * It is a completetion model, so it doesn't like large model. using a pipeline to group generator and tokenizer
     * Looking for model in the leadebords from HF. 7B or 8B to run in open gpu's.
 
+## Ollama and CPU run
 
+* Ollama is an opensource library that allows to run models without gpu locally. For models that are supported by ollama check repo
+* We can use it as a drop in replacement for a api, like open ai. it supports mistral
+* Example of use:
+        Aqui puedo modificar la URL a la que apunta el codigo, en lugar de a la de mistral api, a la del puerto desde el que se puede acceder a ollama. No necesitaria una key porque mi puerto esta abierto sino que tendria que apuntar a la aplicacion ollama para que se ejecute. luego podria pedirle un modelo de ollama, en este caso podria usar mistral 7b en lugar de mistral small latest.
+
+
+        1. hay que hacer ollama serve para que se habra la url 
+        2. luego hay que hacer ollama pull para que descargue el modelo
+        3. a partir de ahi se pude usar
