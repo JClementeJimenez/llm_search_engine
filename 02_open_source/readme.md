@@ -32,6 +32,7 @@
 
 * Ollama is an opensource library that allows to run models without gpu locally. For models that are supported by ollama check repo
 * We can use it as a drop in replacement for a api, like open ai. it supports mistral
+* ollama puts the models where it can be modifyed in the .ollama folder
 * Example of use:
         Aqui puedo modificar la URL a la que apunta el codigo, en lugar de a la de mistral api, a la del puerto desde el que se puede acceder a ollama. No necesitaria una key porque mi puerto esta abierto sino que tendria que apuntar a la aplicacion ollama para que se ejecute. luego podria pedirle un modelo de ollama, en este caso podria usar mistral 7b en lugar de mistral small latest.
 
@@ -39,3 +40,19 @@
         1. hay que hacer ollama serve para que se habra la url 
         2. luego hay que hacer ollama pull para que descargue el modelo
         3. a partir de ahi se pude usar
+* we can run it also in docker
+    ```
+    docker run -it \
+    -v ollama:/root/.ollama \
+    -p 11434:11434 \
+    --name ollama \
+    ollama/ollama
+
+    docker exec -it ollama bash
+    ollama pull phi3
+    ```
+
+* or with a python client [(ollama py github)](https://github.com/ollama/ollama-python)
+
+* docker compose to use a docker with elastic search and ollama in another docker
+
