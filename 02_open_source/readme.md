@@ -24,6 +24,8 @@
         from huggingface_hub import login 
         login(token = ...)
         ```
-    * 
+    * [LLM tutorial from HF](https://huggingface.co/docs/transformers/en/llm_tutorial)
+    * It is a completetion model, so it doesn't like large model. using a pipeline to group generator and tokenizer
+    * Looking for model in the leadebords from HF. 7B or 8B to run in open gpu's.
 
 
