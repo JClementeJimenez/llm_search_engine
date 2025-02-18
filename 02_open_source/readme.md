@@ -1,6 +1,6 @@
 # Introduction to open source llm usage:
 
-* I'm going to do it in a detached way, without a proper gpu since i cannot connect to google collab and i dont want to use aturn cloud or vm's in gcp
+* I'm going to do it in a detached way, without a proper gpu since i cannot connect to google collab and i dont want to use saturn cloud or vm's in gcp
 
 ## HUGGING FACE AND GOOGLE FLAN
 

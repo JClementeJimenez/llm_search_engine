@@ -171,3 +171,5 @@ cython_debug/
 .pypirc
 
 key.yaml
+
+elastic_data/*
