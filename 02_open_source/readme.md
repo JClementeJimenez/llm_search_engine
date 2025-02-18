@@ -49,10 +49,25 @@
     ollama/ollama
 
     docker exec -it ollama bash
-    ollama pull phi3
+    ollama pull phi3 or whatever model
     ```
 
 * or with a python client [(ollama py github)](https://github.com/ollama/ollama-python)
 
-* docker compose to use a docker with elastic search and ollama in another docker
+* docker compose to use a docker with elastic search and ollama in another docker: 
+```
+docker run -it     --name elasticsearch     -m 1GB    -p 9200:9200    -p 9300:9300    -e "discovery.type=single-node"    -e "xpack.security.enabled=false"     -v /workspaces/llm_search_engine/elastic_data:/usr/share/elasticsearch/data     docker.elastic.co/elasticsearch/elasticsearch:8.17.2
+
+    docker run -it \
+    -v ollama:/root/.ollama \
+    -p 11434:11434 \
+    --name ollama \
+    ollama/ollama
+
+```
+* we don't need to index again and again with elastic search because it saves it its folder in the local host
+
+## streamlit ui
+
+* Include the main py file inside the folder and then run it. It hasto be re3cursive, it has to update the prompts with the older questions and answers
 
