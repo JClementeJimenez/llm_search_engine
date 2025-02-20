@@ -60,6 +60,12 @@ By leveraging embeddings, we can build more intelligent and context-aware system
 - **Cosine Similarity**: Measures the cosine of the angle between two vectors. It ranges from -1 to 1, where 1 means the vectors are identical.
 - **Euclidean Distance**: Measures the straight-line distance between two vectors in a multi-dimensional space.
 
+# Metrics:
 
-In the next chapter, we will demonstrate how to set up a semantic search engine using Elasticsearch. This hands-on lab will illustrate the concepts discussed, providing a comprehensive understanding of vector databases in action. Remember, vector search is a broader concept that involves finding similar items in a dataset by comparing their vector representations.
+Set a gold standard to know if the answers are good. First, we have to know if the docs that are retrieved are the best for each prompt. Then, we have to set a series of metrics to know if the info retrieved works fine, it can be the user or another LLM.
 
+It can be boosting parametrs for the search engine, filters, etc. It is also a ranking problem, some documents have to be ranked upon its relevance with the answer. 
+
+## getting the gold dataset
+
+* We are going to generate a dataset where for each query, which are the most relevant answers. For our problem, for each record in FAQ we are going to generate 5 questions. There are many ways to do this, manually by and expert but we are going to use an LLM.
