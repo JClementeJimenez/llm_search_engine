@@ -39,4 +39,21 @@
 
 *the first part of the code is a wrap up to the previous modules*
 
+## Monitoring User feedback
+
+We want to capture the user feedback on the quality of the answers. Add thumbs up/down buttons or something similar. the course uses claude to create the code for the streamlit ui. 
+
+We want to save users question and answers on postgres and their feedback.
+
+It is importatn to have logs on the process
+
+Use docker compose to set each step of the model inside. then we can interact with each container from the terminal using docker exec -it
+
+we want to add something that can allow us to choose between vector search or text search. Also using different models, either connect with ollama or with vector search
+
+### Using grafana
+
+we add info about number of tokens, costs of using the llms, relevance of the answer etc then we also save conversations and answers and we want to be able to pull them from the database
+
+for checking graphana we can generate synthetic data using a program that populates the tables constantly
 
